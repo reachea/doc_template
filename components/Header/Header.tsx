@@ -11,16 +11,17 @@ import { HeaderContainerCenter } from "../../style/Main";
 
 interface HeaderProps {
   name?: string;
+  sider?: string;
 }
 
-const Header: React.FC<HeaderProps> = () => {
+const Header: React.FC<HeaderProps> = ({ sider }) => {
   const [search, setSearch] = useState("");
 
   const router = useRouter();
 
   return (
     <HeaderContainer>
-      <HeaderContainerCenter>
+      <HeaderContainerCenter className={`${sider ? sider : ""}`}>
         {router.pathname === "/" ? (
           <HeaderTitle>How can we help you?</HeaderTitle>
         ) : null}

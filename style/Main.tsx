@@ -17,8 +17,7 @@ export const Container = styled.div`
   }
   @media (min-width: 992px) {
     max-width: 960px;
-    padding-right: 0px;
-    padding-left: 250px;
+    padding: 0px 0px;
   }
   @media (min-width: 1200px) {
     max-width: 1140px;
@@ -41,6 +40,10 @@ export const HeaderContainerCenter = styled(Container)`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
+  .sider {
+    padding-left: 250px;
+  }
 `;
 
 export const HomeCardContainer = styled(Container)`
@@ -48,11 +51,31 @@ export const HomeCardContainer = styled(Container)`
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-between;
+  margin-top: 30px;
 
   @media and screen (max-width: 1200px) {
     flex-wrap: no-wrap;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+  }
+`;
+
+export const ContentWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+`;
+
+export const ContentMain = styled.div`
+  width: 100%;
+  padding-left: 250px;
+  min-height: 70vh;
+
+  @media screen and (max-width: 992px) {
+    width: 100%;
+    padding-left: 0px;
   }
 `;

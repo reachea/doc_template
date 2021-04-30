@@ -7,6 +7,14 @@ export const HeaderContainer = styled.div`
   padding-top: 20px;
   background-color: rgb(88, 58, 188);
   margin-top: 70px;
+
+  .sider {
+    padding-left: 250px;
+
+    @media screen and (max-width: 992px) {
+      padding-left: 0px;
+    }
+  }
 `;
 
 export const HeaderTitle = styled.div`

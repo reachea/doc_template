@@ -4,7 +4,6 @@ import Head from "next/head";
 import Navbar from "../components/Navbar/Navbar";
 
 import { createGlobalStyle } from "styled-components";
-import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 
 class MyApp extends App {
@@ -29,7 +28,7 @@ class MyApp extends App {
           />
         </Head>
         <Navbar />
-        <Header />
+
         <Component {...pageProps} />
         <Footer />
       </>

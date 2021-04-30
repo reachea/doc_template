@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const SiderContainer = styled.div`
-  width: 250px;
+  width: 500px;
   height: 100%;
   position: absolute;
 
@@ -50,13 +50,13 @@ export const SiderContent = styled.div`
   padding: 20px;
   transition: all 0.5s ease-out;
 
-  @media screen and (min-width: 992px) {
-    left: 0px;
-  }
-
   &.collapse {
     transition: all 0.5s ease-in;
     left: 0px;
+
+    @media screen and (min-width: 992px) {
+      left: -100%;
+    }
   }
 
   i {
@@ -67,10 +67,6 @@ export const SiderContent = styled.div`
     :hover {
       color: rgb(255, 251, 249);
       cursor: pointer;
-    }
-
-    @media screen and (min-width: 992px) {
-      display: none;
     }
   }
 `;
