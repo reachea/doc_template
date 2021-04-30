@@ -1,5 +1,13 @@
+import Link from "next/link";
 import React, { useState } from "react";
-import { SiderButton, SiderContainer, SiderContent } from "./SiderStyle";
+import {
+  NavList,
+  ParentNavLinkContainer,
+  SiderButton,
+  SiderContainer,
+  SiderContent,
+  SubNavLink,
+} from "./SiderStyle";
 
 const Sider: React.FC<any> = () => {
   const [isCollapse, setIsCollapse] = useState(false);
@@ -12,10 +20,27 @@ const Sider: React.FC<any> = () => {
       </SiderButton>
 
       <SiderContent className={`${isCollapse ? "collapse" : ""}`}>
-        <i
-          onClick={() => setIsCollapse(!isCollapse)}
-          className="fa fa-times fa-lg"
-        ></i>
+        <ParentNavLinkContainer>
+          <NavList>
+            <Link href="#">
+              <a className="active">What it is about?</a>
+            </Link>
+          </NavList>
+
+          <SubNavLink className="navlink-sub-header">
+            <NavList>
+              <Link href="#">
+                <a>About L192</a>
+              </Link>
+            </NavList>
+
+            <NavList>
+              <Link href="#">
+                <a>How much does it cost?</a>
+              </Link>
+            </NavList>
+          </SubNavLink>
+        </ParentNavLinkContainer>
       </SiderContent>
     </SiderContainer>
   );

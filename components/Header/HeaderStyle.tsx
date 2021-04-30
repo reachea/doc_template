@@ -17,6 +17,8 @@ export const HeaderContainer = styled.div`
   }
 `;
 
+// #c0392b
+
 export const HeaderTitle = styled.div`
   font-size: 32px;
   color: rgba(255, 251, 249, 1);

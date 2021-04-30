@@ -24,11 +24,13 @@ export const Container = styled.div`
   }
 `;
 
-export const ContainerCenter = styled(Container)`
+export const ContainerCenter = styled.div`
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: space-between;
   position: relative;
+  width: 100%;
+  padding: 0px 20px;
 
   @media screen and (max-width: 992px) {
     justify-content: center;
@@ -70,12 +72,15 @@ export const ContentWrapper = styled.div`
 `;
 
 export const ContentMain = styled.div`
-  width: 100%;
-  padding-left: 250px;
+  padding: 2rem 2.5rem calc(300px + 2.5rem);
   min-height: 70vh;
+  max-width: 740px;
+  margin-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
 
   @media screen and (max-width: 992px) {
     width: 100%;
-    padding-left: 0px;
+    padding: 2rem;
   }
 `;

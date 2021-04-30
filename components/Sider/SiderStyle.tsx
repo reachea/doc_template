@@ -41,13 +41,14 @@ export const SiderButton = styled.div`
 
 export const SiderContent = styled.div`
   position: fixed;
-  width: 250px;
-  min-height: 100vh;
-  top: 0px;
+  width: 300px;
+  min-height: calc(100vh - 70px);
+  top: 70px;
   left: -100%;
-  background-color: rgb(88, 18, 188);
+  background-color: #ffffff;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
   font-size: 18px;
-  padding: 20px;
+  padding: 20px 0px;
   transition: all 0.5s ease-out;
 
   &.collapse {
@@ -58,15 +59,34 @@ export const SiderContent = styled.div`
       left: -100%;
     }
   }
+`;
 
-  i {
-    color: rgba(255, 251, 249, 0.6);
-    position: absolute;
-    right: 20px;
+export const ParentNavLinkContainer = styled.ul`
+  padding: 1.5rem 0;
+  list-style-type: none;
+`;
 
-    :hover {
-      color: rgb(255, 251, 249);
-      cursor: pointer;
-    }
+export const SubNavLink = styled.ul`
+  padding-left: 15px;
+  list-style-type: none;
+
+  a {
+    font-size: 0.95rem;
+  }
+`;
+
+export const NavList = styled.li`
+  a {
+    text-decoration: none;
+    color: #2c3e50;
+    padding: 0.35rem 1rem 0.35rem 1.25rem;
+    line-height: 1.7rem;
+  }
+
+  .active {
+    font-size: 1.1rem;
+    color: #c0392b;
+    font-weight: 700;
+    border-left: 0.25rem solid #c0392b;
   }
 `;

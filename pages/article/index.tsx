@@ -6,11 +6,10 @@ import { ContentMain, ContentWrapper } from "../../style/Main";
 const Article: React.FC<any> = () => {
   return (
     <>
-      <Header sider="sider" />
       <ContentWrapper>
         <Sidebar></Sidebar>
 
-        <ContentMain>Container</ContentMain>
+        <ContentMain>Container asdsaddasd</ContentMain>
       </ContentWrapper>
     </>
   );
