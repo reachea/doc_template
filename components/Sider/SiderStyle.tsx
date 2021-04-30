@@ -1,9 +1,13 @@
 import styled from "styled-components";
 
 export const SiderContainer = styled.div`
-  width: 100%;
+  width: 250px;
   height: 100%;
   position: absolute;
+
+  @media screen and (max-width: 992px) {
+    width: 100%;
+  }
 `;
 
 export const SiderButton = styled.div`
@@ -36,23 +40,23 @@ export const SiderButton = styled.div`
 `;
 
 export const SiderContent = styled.div`
-  position: absolute;
+  position: fixed;
   width: 250px;
   min-height: 100vh;
-  top: -24px;
+  top: 0px;
   left: -100%;
   background-color: rgb(88, 18, 188);
   font-size: 18px;
   padding: 20px;
   transition: all 0.5s ease-out;
 
+  @media screen and (min-width: 992px) {
+    left: 0px;
+  }
+
   &.collapse {
     transition: all 0.5s ease-in;
-    left: -74px;
-
-    @media screen and (min-width: 992px) {
-      left: -100%;
-    }
+    left: 0px;
   }
 
   i {
@@ -63,6 +67,10 @@ export const SiderContent = styled.div`
     :hover {
       color: rgb(255, 251, 249);
       cursor: pointer;
+    }
+
+    @media screen and (min-width: 992px) {
+      display: none;
     }
   }
 `;

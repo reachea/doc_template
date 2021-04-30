@@ -33,9 +33,9 @@ const Navbar: React.FC<any> = () => {
     <>
       <NavbarContainer>
         <ContainerCenter>
-          <Sider />
           <Logo>Guia</Logo>
           <NavlinkContainer>{menu}</NavlinkContainer>
+          <Sider />
         </ContainerCenter>
       </NavbarContainer>
     </>
